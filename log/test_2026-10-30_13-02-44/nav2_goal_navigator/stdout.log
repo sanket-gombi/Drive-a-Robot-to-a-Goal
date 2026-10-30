@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.11.0, pluggy-0.13.0
+cachedir: /home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/.pytest_cache
+rootdir: /home/sanket/orca_robotics_task/nav2_goal_task/src/nav2_goal_navigator
+plugins: launch-testing-1.0.15, launch-testing-ros-0.19.14, ament-xmllint-0.12.15, ament-flake8-0.12.15, ament-lint-0.12.15, ament-pep257-0.12.15, ament-copyright-0.12.15, repeat-0.9.3, rerunfailures-12.0, cov-4.1.0, colcon-core-0.21.3, timeout-2.2.0, mock-3.6.1
+collecting ... 
+collected 3 items                                                              
+
+test/test_copyright.py s                                                 [ 33%]
+test/test_flake8.py .                                                    [ 66%]
+test/test_pep257.py .                                                    [100%]
+
+- generated xml file: /home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/pytest.xml -
+========================= 2 passed, 1 skipped in 0.28s =========================

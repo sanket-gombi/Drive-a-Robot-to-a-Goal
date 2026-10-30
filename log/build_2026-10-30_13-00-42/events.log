@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000160] (nav2_goal_navigator) JobQueued: {'identifier': 'nav2_goal_navigator', 'dependencies': OrderedDict()}
+[0.000185] (nav2_goal_navigator) JobStarted: {'identifier': 'nav2_goal_navigator'}
+[0.099502] (-) TimerEvent: {}
+[0.158416] (nav2_goal_navigator) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 120, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 54, in build\n    data_files = get_data_files_mapping(\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 42, in get_data_files_mapping\n    assert not os.path.isabs(source), \\\nAssertionError: \'data_files\' must be relative, \'/home/sanket/orca_robotics_task/nav2_goal_task/maps/map.yaml\' is absolute\n'}
+[0.159130] (nav2_goal_navigator) JobEnded: {'identifier': 'nav2_goal_navigator', 'rc': 1}
+[0.169549] (-) EventReactorShutdown: {}

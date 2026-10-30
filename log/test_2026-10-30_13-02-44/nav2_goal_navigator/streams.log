@@ -1,0 +1,16 @@
+[0.237s] Invoking command in '/home/sanket/orca_robotics_task/nav2_goal_task/src/nav2_goal_navigator': AMENT_PREFIX_PATH=/home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTEST_ADDOPTS=--tb=short --junit-xml=/home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/pytest.xml --junit-prefix=nav2_goal_navigator -o cache_dir=/home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[0.593s] ============================= test session starts ==============================
+[0.593s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.11.0, pluggy-0.13.0
+[0.602s] cachedir: /home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/.pytest_cache
+[0.602s] rootdir: /home/sanket/orca_robotics_task/nav2_goal_task/src/nav2_goal_navigator
+[0.602s] plugins: launch-testing-1.0.15, launch-testing-ros-0.19.14, ament-xmllint-0.12.15, ament-flake8-0.12.15, ament-lint-0.12.15, ament-pep257-0.12.15, ament-copyright-0.12.15, repeat-0.9.3, rerunfailures-12.0, cov-4.1.0, colcon-core-0.21.3, timeout-2.2.0, mock-3.6.1
+[0.669s] collecting ... 
+[0.669s] collected 3 items                                                              
+[0.669s] 
+[0.673s] test/test_copyright.py s                                                 [ 33%]
+[0.825s] test/test_flake8.py .                                                    [ 66%]
+[0.875s] test/test_pep257.py .                                                    [100%]
+[0.875s] 
+[0.875s] - generated xml file: /home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/pytest.xml -
+[0.875s] ========================= 2 passed, 1 skipped in 0.28s =========================
+[0.949s] Invoked command in '/home/sanket/orca_robotics_task/nav2_goal_task/src/nav2_goal_navigator' returned '0': AMENT_PREFIX_PATH=/home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTEST_ADDOPTS=--tb=short --junit-xml=/home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/pytest.xml --junit-prefix=nav2_goal_navigator -o cache_dir=/home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest

@@ -1,0 +1,2 @@
+[console_scripts]
+navigate_to_goal = nav2_goal_navigator.navigate_to_goal:main

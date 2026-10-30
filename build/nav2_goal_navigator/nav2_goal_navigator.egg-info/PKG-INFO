@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: nav2-goal-navigator
+Version: 1.0.0
+Summary: ROS 2 Python node commanding autonomous navigation to a target pose via Nav2
+Maintainer: Sanket
+Maintainer-email: sanketgombi@gmail.com
+License: Apache-2.0
+Provides-Extra: test

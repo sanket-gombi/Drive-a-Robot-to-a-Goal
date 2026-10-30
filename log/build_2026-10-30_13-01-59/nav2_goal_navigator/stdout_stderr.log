@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/PKG-INFO
+writing dependency_links to ../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/dependency_links.txt
+writing entry points to ../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/entry_points.txt
+writing requirements to ../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/requires.txt
+writing top-level names to ../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/top_level.txt
+reading manifest file '../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/SOURCES.txt'
+writing manifest file '../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/bringup_sim.launch.py -> /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/share/nav2_goal_navigator/launch
+creating /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/share/nav2_goal_navigator/maps
+copying maps/map.yaml -> /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/share/nav2_goal_navigator/maps
+copying maps/map.pgm -> /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/share/nav2_goal_navigator/maps
+creating /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/share/nav2_goal_navigator/config
+copying config/nav2_params.yaml -> /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/share/nav2_goal_navigator/config
+running install_egg_info
+removing '/home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/lib/python3.10/site-packages/nav2_goal_navigator-1.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/nav2_goal_navigator/nav2_goal_navigator.egg-info to /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/lib/python3.10/site-packages/nav2_goal_navigator-1.0.0-py3.10.egg-info
+running install_scripts
+Installing navigate_to_goal script to /home/sanket/orca_robotics_task/nav2_goal_task/install/nav2_goal_navigator/lib/nav2_goal_navigator
+writing list of installed files to '/home/sanket/orca_robotics_task/nav2_goal_task/build/nav2_goal_navigator/install.log'
