@@ -322,26 +322,3 @@ Use a screen recorder such as **OBS Studio** (`sudo apt install obs-studio`) or 
 | **Launch file fails after clean clone** *(Phase 7)* | `bringup_sim.launch.py` used `os.path.dirname(__file__)` traversal to find `maps/` and `config/`; after `colcon build`, `__file__` is the installed copy and the traversal pointed to the wrong directory | Moved `maps/` and `config/` inside the ROS package (`src/nav2_goal_navigator/`), added them to `data_files` in `setup.py`, and updated the launch file to use `get_package_share_directory('nav2_goal_navigator')` — the canonical portable approach. |
 
 ---
-
-## Interview Explanations & FAQ
-
-### Architecture Breakdown
-1. **Occupancy Grid Map:** A 2D discrete grid where each cell represents probability of occupancy (0 = free space, 100 = occupied, -1 = unknown).
-2. **AMCL:** Employs a Particle Filter where each particle represents a hypothesis of the robot's pose. As the robot moves and scans the environment, particle weights are updated using sensor likelihood models.
-3. **Costmaps (2D Layers):**
-   - *Static Layer:* Occupancy data from pre-recorded map.
-   - *Obstacle Layer:* Real-time sensor measurements (LiDAR `/scan`).
-   - *Inflation Layer:* Adds safety clearance proportional to robot footprint radius.
-4. **Behavior Trees in Nav2:** Coordinates high-level decision making, recoveries (back up, spin, clear costmap), and planner/controller sequencing without fragile state machines.
-
-### Top 5 Interview Questions & Answers
-1. **Q: Why use an Action Client instead of a Service for navigation?**  
-   *A:* Services are synchronous request-response mechanisms that block until completion. Navigation takes seconds or minutes; an Action provides asynchronous execution, continuous distance/time feedback, and mid-trajectory cancellation.
-2. **Q: How does Nav2 handle obstacles that do not exist on the pre-built map?**  
-   *A:* The Obstacle Layer in the costmap listens to the live `/scan` topic and marks cells dynamically. The costmap updater merges this with the static layer. When the global or local planner runs its periodic cycle, it detects the high cost and routes around it.
-3. **Q: What is the difference between `/odom` and `/map` coordinate frames?**  
-   *A:* `/odom` is continuous and locally accurate (calculated from wheel encoders and IMU) but drifts indefinitely. `/map` is a world-fixed frame where AMCL calculates discrete position corrections (`map -> odom` transform) using LiDAR matching to eliminate drift.
-4. **Q: What happens if an obstacle completely blocks the only available corridor?**  
-   *A:* Nav2's Behavior Tree triggers recovery behaviors: clearing local costmap, spinning to re-scan, backing up, and re-planning. If no valid trajectory exists after all retries, the action server returns status `ABORTED` (Code 6), which our node detects and prints `GOAL FAILED`.
-5. **Q: Why is differential drive kinematically constrained?**  
-   *A:* A differential drive robot cannot translate sideways ($v_y = 0$, non-holonomic constraint). Path planners like NavFn plan geometric paths, but trajectory controllers like DWB evaluate feasible forward and angular velocities $(v_x, \omega)$ that satisfy robot acceleration limits.
