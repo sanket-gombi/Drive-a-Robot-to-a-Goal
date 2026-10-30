@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!-- Package manifest for nav2_goal_navigator -->
+<package format="3">
+  <name>nav2_goal_navigator</name>
+  <version>1.0.0</version>
+  <description>ROS 2 Python node commanding autonomous navigation to a target pose via Nav2 NavigateToPose action</description>
+  <maintainer email="sanketgombi@gmail.com">Sanket</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Core ROS 2 and Nav2 dependencies -->
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>action_msgs</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
