@@ -290,28 +290,6 @@ GOAL FAILED (status: ABORTED)
 
 ---
 
-## Screen Recording Script
-
-Use a screen recorder such as **OBS Studio** (`sudo apt install obs-studio`) or **SimpleScreenRecorder** (`sudo apt install simplescreenrecorder`).
-
-### 2–3 Minute Demonstration Script:
-1. **Introduction (0:00 - 0:25):**
-   - *Audio:* "Hello, this is Sanket demonstrating autonomous mobile robot navigation using ROS 2 Humble, Nav2, and Gazebo Classic."
-   - *Visual:* Show the desktop split into Gazebo (left), RViz2 (right), and terminal (bottom).
-2. **Initial Localization & RViz Overview (0:25 - 0:50):**
-   - *Audio:* "The TurtleBot3 Burger is localized in the turtlebot3_world maze using AMCL. In RViz, we see the static occupancy grid and the particle cloud aligned."
-   - *Visual:* Point out the TF frames (`map -> odom -> base_footprint`).
-3. **Core Task: Autonomous Goal Execution (0:50 - 1:35):**
-   - *Audio:* "I now launch our custom Python action client node `navigate_to_goal` commanding the robot to $(x=1.8, y=0.0)$."
-   - *Visual:* Run the command. Show the green global trajectory appearing in RViz, the local trajectory in cyan, the robot driving in Gazebo, and distance feedback streaming in the terminal until printing `GOAL SUCCEEDED`.
-4. **Bonus Task: Dynamic Obstacle Replanning (1:35 - 2:20):**
-   - *Audio:* "Now we test the bonus deliverable: dynamic obstacle avoidance. Using our spawner script, we inject an unmapped red box in the middle of the hallway."
-   - *Visual:* Run `spawn_obstacle.py spawn`. Show the box appearing in Gazebo. Send the goal pose. Show the LiDAR points hitting the box, the local costmap inflating cost values, and the planner dynamically replanning an alternative route around the box.
-5. **Conclusion & Failure Handling (2:20 - 2:45):**
-   - *Audio:* "Finally, we demonstrate robust error handling. Sending an out-of-bounds goal triggers recovery spins and cleanly returns `GOAL FAILED (status: ABORTED)` with non-zero exit code. All code is tested and lint-compliant."
-
----
-
 ## Troubleshooting & Real-World Fixes
 
 | Issue Encountered | Root Cause | Solution Applied |
